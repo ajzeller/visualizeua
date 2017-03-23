@@ -1,0 +1,83 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 2000px;
+  padding-top: 70px;
+  background-color: #fff;
+}
+
+/*Navigation*/
+
+.navbar {
+  color: #000;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #D6D5D6;
+  box-shadow: 0px 0px 30px rgba(153, 153, 153, 0.5);
+}
+
+.navbar-default .navbar-brand {
+  font-size: 24px;
+  color: #fff;
+}
+
+.navbar-fixed-top .navbar-brand {
+  font-size: 24px;
+  color: #333333;
+  font-weight: 400;
+}
+
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+}
+
+.navbar-fixed-top .navbar-nav>li>a {
+  color: #7F7F7F;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.about-tabs {
+  margin-bottom: 20px;
+}
+
+.nav-tabs>li>a {
+  color: #7F7F7F;
+  font-weight: 300;
+}
+
+.navbar-about {
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: none;
+  z-index: 1;
+}
+
+#home-header {
+  font-weight: 300;
+  text-shadow: 0px 0px 20px rgba(153, 153, 153, 0.2);
+}
+
+.page-top {
+  margin-top: 65px;
+}
+
+/*Buttons*/
+
+.btn-primary {
+  background-color: #9e1b32;
+  border: none;
+  border-radius: 0.25em;
+  box-shadow: 0px 0px 30px rgba(153, 153, 153, 0.5),
+              0px 10px 10px rgba(153, 153, 153, 0.5);
+}
+
+.btn-primary:hover {
+  background-color: rgba(158, 27, 50, 0.9);
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
