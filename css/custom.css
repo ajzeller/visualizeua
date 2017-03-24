@@ -55,6 +55,7 @@ body {
 #home-header {
   font-weight: 300;
   text-shadow: 0px 0px 20px rgba(153, 153, 153, 0.2);
+  margin-bottom: 20px;
 }
 
 .page-top {
@@ -65,14 +66,18 @@ body {
 
 .btn-primary {
   background-color: #9e1b32;
+  font-weight: 300;
   border: none;
   border-radius: 0.25em;
   box-shadow: 0px 0px 30px rgba(153, 153, 153, 0.5),
-              0px 10px 10px rgba(153, 153, 153, 0.5);
+              0px 10px 30px rgba(153, 153, 153, 0.5);
 }
 
 .btn-primary:hover {
-  background-color: rgba(158, 27, 50, 0.9);
+  background-color: #971b2f;
+  /*background-color: rgba(158, 27, 50, 0.9);*/
+  box-shadow: 0px 0px 30px rgba(153, 153, 153, 0.5),
+              0px 10px 30px rgba(153, 153, 153, 0.5);
 }
 
 a.anchor {
@@ -80,4 +85,48 @@ a.anchor {
   position: relative;
   top: -100px;
   visibility: hidden;
+}
+
+#home-image {
+  height: 200px;
+  opacity: 0.3;
+  display: inline;
+  float: left;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.5em;
+}
+
+#home-banner {
+  margin-left: 50px;
+}
+
+.jumbotron {
+  background-color: #f6f6f6;
+  box-shadow: 0px 0px 40px rgba(153, 153, 153, 0.3),
+              0px 10px 30px rgba(153, 153, 153, 0.3);
+}
+
+#jumbotron-main {
+  border-radius: 1em;
+}
+
+.team-member {
+  box-shadow: 0px 0px 40px rgba(153, 153, 153, 0.3),
+              0px 10px 30px rgba(153, 153, 153, 0.3);
+  border: none;
+  border-radius: 0.5em;
+}
+
+.panel-footer {
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
 }
