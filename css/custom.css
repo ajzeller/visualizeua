@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   min-height: 2000px;
-  padding-top: 70px;
+  padding-top: 80px;
   background-color: #fff;
 }
 
@@ -15,12 +15,12 @@ body {
 }
 
 .navbar-default .navbar-brand {
-  font-size: 24px;
+  font-size: 22px;
   color: #fff;
 }
 
 .navbar-fixed-top .navbar-brand {
-  font-size: 24px;
+  font-size: 30px;
   color: #333333;
   font-weight: 400;
 }
@@ -52,6 +52,22 @@ body {
   z-index: 1;
 }
 
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 0px;
+  border-radius: 0.5em;
+}
+
+.navbar-nav > li > .dropdown-menu:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 30px;
+  top: 100px;
+  border: 1px solid rgba(0,0,0,.15)
+  border-color: #666 transparent transparent #666;
+}
+
 #home-header {
   font-weight: 300;
   text-shadow: 0px 0px 20px rgba(153, 153, 153, 0.2);
@@ -59,7 +75,7 @@ body {
 }
 
 .page-top {
-  margin-top: 65px;
+  margin-top: 85px;
 }
 
 /*Buttons*/
@@ -83,7 +99,7 @@ body {
 a.anchor {
   display: block;
   position: relative;
-  top: -100px;
+  top: -70px;
   visibility: hidden;
 }
 
@@ -130,6 +146,29 @@ h1, h2, h3, h4, h5 {
 .footer {
   text-align: center;
 }
+
+#mission-icon {
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.header-centered {
+  text-align: center;
+}
+
+.panel-default > .about-heading {
+  background-color: #fff;
+}
+
+.about-panel {
+  box-shadow: 0px 0px 0px rgba(153, 153, 153, 0.3),
+              0px 10px 20px rgba(153, 153, 153, 0.1);
+  border: none;
+  border-radius: 0.5em;
+}
+
 
 /* Custom, iPhone Retina */
    @media only screen and (max-width : 767px) {
