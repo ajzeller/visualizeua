@@ -6,19 +6,29 @@ permalink: /about/
 <div class="container">
   <nav class="navbar navbar-default navbar-fixed-top navbar-about">
     <div class="container">
-      <ul class="nav navbar-nav navbar-center">
-        <li class="nav-centered"><a href="#mission">Mission</a></li>
-        <li class="nav-centered"><a href="#team">Meet the Team</a></li>
-        <li class="nav-centered"><a href="#contribute">Contribute</a></li>
-      </ul>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-about" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <!-- <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> -->
+          <span>About</span>
+          <span class="caret"> </span></a>
+        </button>
+      </div>
+      <div id="navbar-about" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-center">
+          <li class="nav-centered"><a href="#mission">Mission</a></li>
+          <li class="nav-centered"><a href="#team">Meet the Team</a></li>
+          <li class="nav-centered"><a href="#contribute">Contribute</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </div>
 
 
 <div class="container">
-
-      <div class="container">
         <a class="anchor" name="mission"></a>
         <div class="page-top page-header">
           <img src="{{ site.url }}/assets/images/mission-1.svg" id="mission-icon" />
@@ -107,8 +117,4 @@ permalink: /about/
             </p>
           </div>
         </div>
-
-
-
-    </div>
   </div>
