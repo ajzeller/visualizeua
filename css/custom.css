@@ -103,6 +103,8 @@ a.anchor {
   visibility: hidden;
 }
 
+/*Images*/
+
 #home-image {
   height: 200px;
   opacity: 0.3;
@@ -110,6 +112,27 @@ a.anchor {
   float: left;
   margin-left: 30px;
   margin-right: 30px;
+}
+
+.headshot {
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 0.25em;
+  box-shadow: 0px 0px 0px rgba(153, 153, 153, 0.5),
+              0px 10px 20px rgba(153, 153, 153, 0.5);
+}
+
+.headshot:hover {
+  box-shadow: 0px 0px 0px rgba(153, 153, 153, 0.7),
+              0px 10px 20px rgba(153, 153, 153, 0.7);
+  opacity: 0.9;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
 }
 
 h1, h2, h3, h4, h5 {
@@ -131,8 +154,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .team-member {
-  box-shadow: 0px 0px 40px rgba(153, 153, 153, 0.3),
-              0px 10px 30px rgba(153, 153, 153, 0.3);
+  box-shadow: 0px 0px 40px rgba(153, 153, 153, 0.15),
+              0px 10px 30px rgba(153, 153, 153, 0.2);
   border: none;
   border-radius: 0.5em;
 }
@@ -141,6 +164,11 @@ h1, h2, h3, h4, h5 {
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   text-align: center;
+}
+
+.team-member>.panel-footer {
+  background-color: rgba(153, 153, 153, 0);
+  border: none;
 }
 
 .footer {
