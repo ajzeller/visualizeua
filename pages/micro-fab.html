@@ -2,9 +2,43 @@
 layout: default
 title: Micro Fabrication Facility - Visualize UA
 permalink: /micro-fab/
+lab-location: Micro Fabrication Facility
+youtube-code: _TdqKds9pm8
+location-description: Located in the South Engineering Research Center, the Large Scale Structures Lab (LSSL) is equipped to test high force seismic and wind response. The 12-ft x 13-ft earthquake simulation shake table can withstand 20 tons and 1.2g acceleration. The lab's floor contains reaction blocks that can be arranged in various configurations for diversified testing.
 ---
 
 <div class="container">
+  <div class="panel panel-default lab-container">
+    <div class="panel-heading">
+      <h2 class="video-panel"> {{ page.lab-location }} </h2>
+    </div>
+      <div class="video-detail-container desktop">
+        <img src="{{ site.url }}/assets/images/360-video.png" class="icon-360"/>
 
-  Micro Fabrication Facility
+        Fully immerse yourself in the {{ page.lab-location }}. Play the video
+        and drag the screen in any direction to view the lab from 360 degrees.
+      </div>
+
+    <iframe src="https://www.youtube.com/embed/{{ page.youtube-code }}" frameborder="0" allowfullscreen class="youtube-embed"></iframe>
+
+    <a class="youtube-link" href="https://www.youtube.com/watch?v={{ page.youtube-code }}">
+      <div class="video-detail-container mobile">
+        <!-- <i class="fa fa-exclamation-circle" aria-hidden="true"></i> -->
+        <i class="fa fa-youtube" aria-hidden="true"></i>
+        Click here to view 360 degree video on a mobile device via YouTube App. You
+        can either drag the screen in any direction or physically rotate your device
+        to see the lab in 360 degrees. Play video using a VR viewer like
+        Google Cardboard for further immersion.
+      </div>
+    </a>
+
+
+
+    <div class="panel-footer container-video-description">
+      {{ page.location-description }}
+    </div>
+
+  </div>
+
+
 </div>

@@ -6,6 +6,7 @@ title: Home
 <div class="splash-section-1">
   <!-- <img src="{{ site.url }}/assets/images/vr_face-01.png" id="home-image" /> -->
   <div class="container" id="home-banner">
+    <h2 class="splash-header-1">Experience the University of Alabama in Virtual Reality</h2>
     <div class="panel type-window">
       <div class="panel-heading"><p class="window-heading">ua-in-vr.js</p></div>
       <div class="panel-body">
@@ -22,7 +23,7 @@ title: Home
     </div>
     <!-- <h2 class="splash-header-1">Experience The University of Alabama in Virtual Reality.</h2> -->
     <p>
-      <button type="button" class="btn btn-primary btn-lg">Take the tour now <i class="fa fa-street-view" aria-hidden="true"></i></button>
+      <a data-scroll href="#tour" class="btn btn-primary btn-lg">Take the tour now <i class="fa fa-street-view" aria-hidden="true"></i></a>
     </p>
 
 
@@ -32,38 +33,79 @@ title: Home
 
 <div class="container-fluid splash-section-2">
   <div class="container">
+    <a class="anchor" name="tour"></a>
     <h2 class='splash-header-2'>360 degree video tours of UA's world-class engineering facilities</h2>
-    <div class="col-md-4">
-      <a href="{{ site.url }}/lss-lab/">
-        <div class="panel tour-panel">
-          <div class="panel-heading">
-            Large Scale Structures Lab
-          </div>
-            <img class="tour-img" src="{{ site_url }}/assets/images/lss-lab.png" />
-            <!-- <iframe src="https://www.youtube.com/embed/_TdqKds9pm8" frameborder="0" allowfullscreen class="youtube-embed"></iframe> -->
-        </div>
-      </a>
-    </div>
-    <div class="col-md-4">
-      <a href="{{ site.url }}/ec-lab/">
-        <div class="panel tour-panel">
-          <div class="panel-heading">
-            Engines and Combustion Lab
-          </div>
-          <img class="tour-img" src="{{ site_url }}/assets/images/ec-lab.png" />
+    <div class="row">
 
-        </div>
-      </a>
-    </div>
-    <div class="col-md-4">
-      <div class="panel tour-panel">
-        <div class="panel-heading">
-          Micro-Fabrication Facility
-        </div>
+      <div class="col-md-4">
+        <a class="tour-panel-link" href="{{ site.url }}/lss-lab/">
+          <div class="panel tour-panel">
+            <div class="panel-heading">
+              Large Scale Structures Lab <i class="fa fa-building-o" aria-hidden="true"></i>
+            </div>
+              <img class="tour-img" src="{{ site_url }}/assets/images/lss-lab.png" />
+              <!-- <iframe src="https://www.youtube.com/embed/_TdqKds9pm8" frameborder="0" allowfullscreen class="youtube-embed"></iframe> -->
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a class="tour-panel-link" href="{{ site.url }}/ec-lab/">
+          <div class="panel tour-panel">
+            <div class="panel-heading">
+              Engines and Combustion Lab <i class="fa fa-cogs" aria-hidden="true"></i>
+            </div>
+            <img class="tour-img" src="{{ site_url }}/assets/images/ec-lab.png" />
+
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a class="tour-panel-link" href="{{ site.url }}/micro-fab/">
+          <div class="panel tour-panel">
+            <div class="panel-heading">
+              Micro-Fabrication Facility <i class="fa fa-microchip" aria-hidden="true"></i>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
-  </div>
 
+    <div class="row">
+
+      <div class="col-md-4">
+        <a class="tour-panel-link" href="{{ site.url }}/ls-wind-tunnel/">
+          <div class="panel tour-panel">
+            <div class="panel-heading">
+              Low Speed Wind Tunnel Lab <i class="fa fa-flag-o" aria-hidden="true"></i>
+            </div>
+              <img class="tour-img" src="{{ site_url }}/assets/images/lss-lab.png" />
+              <!-- <iframe src="https://www.youtube.com/embed/_TdqKds9pm8" frameborder="0" allowfullscreen class="youtube-embed"></iframe> -->
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a class="tour-panel-link" href="{{ site.url }}/spot/">
+          <div class="panel tour-panel">
+            <div class="panel-heading">
+              Space Propulsion Observation and Testing <i class="fa fa-rocket" aria-hidden="true"></i>
+            </div>
+            <img class="tour-img" src="{{ site_url }}/assets/images/ec-lab.png" />
+
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a class="tour-panel-link" href="{{ site.url }}/thecube/">
+          <div class="panel tour-panel">
+            <div class="panel-heading">
+              <em>The Cube</em> <i class="fa fa-cube" aria-hidden="true"></i> 3D printing lab
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <div class="container-fluid splash-section-3">
@@ -82,6 +124,8 @@ title: Home
   </div>
 
 </div> -->
+
+<!-- Typed.js -->
 
 <script src="js/typed.js" type="text/javascript"></script>
 <script>
@@ -112,4 +156,14 @@ function newTyped(){ /* A new typed object */ }
 
 function foo(){ console.log("Callback"); }
 
+</script>
+
+<!-- Smooth scroll -->
+
+<script>
+  smoothScroll.init({
+    selector: 'a[href^="#"]',
+    easing: 'easeInOutCubic',
+    speed: 500
+  });
 </script>

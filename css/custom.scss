@@ -109,8 +109,9 @@ h1, h2, h3, h4, h5 {
 
 .splash-header-1 {
   font-weight: $light-weight;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
   margin-bottom: 20px;
+  visibility: hidden;
 }
 
 .splash-header-2 {
@@ -123,7 +124,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #home-banner {
-  margin-top: 300px;
+  margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
   color: $white;
@@ -143,12 +144,13 @@ h1, h2, h3, h4, h5 {
 .splash-section-1 {
   width: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 20px 20px 150px 20px;
   background-image: url( "{{ site_url }}/assets/images/serc.jpg" );
+  background-repeat: no-repeat;
   background-color: $white;
   background-size: cover;
-  background-position: 0 -300px ;
-  min-height: 700px;
+  background-position: bottom ;
+  // min-height: 600px;
   opacity: 1;
   box-shadow: 0px 0px 40px rgba(153, 153, 153, 0.3),
               0px 10px 30px rgba(153, 153, 153, 0.3);
@@ -182,20 +184,25 @@ h1, h2, h3, h4, h5 {
   font-weight: $light-weight;
   border: none;
   border-radius: 0.25em;
-  box-shadow: 0px 0px 30px rgba(153, 153, 153, 0.5),
-              0px 10px 30px rgba(153, 153, 153, 0.5);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3),
+              0px 10px 30px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
 }
 
 .btn-primary:hover {
   background-color: $crimson-hover;
-  box-shadow: 0px 0px 30px rgba(153, 153, 153, 0.5),
-              0px 10px 30px rgba(153, 153, 153, 0.5);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5),
+              0px 10px 30px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
 }
 
 a.anchor {
   display: block;
   position: relative;
-  top: -70px;
+  top: 0px;
   visibility: hidden;
 }
 
@@ -220,15 +227,28 @@ a.anchor {
   border-radius: 0.25em;
   box-shadow: 0px 0px 0px rgba(153, 153, 153, 0.5),
               0px 10px 20px rgba(153, 153, 153, 0.5);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity .25s ease-in-out;
+
+}
+
+.headshot::after {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .headshot:hover {
   box-shadow: 0px 0px 0px rgba(153, 153, 153, 0.7),
               0px 10px 20px rgba(153, 153, 153, 0.7);
   opacity: 0.9;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
+  // -moz-transition: opacity .25s ease-in-out;
+  // -webkit-transition: opacity .25s ease-in-out;
+  -webkit-transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01);
 }
 
 
@@ -326,9 +346,15 @@ a.anchor {
   box-shadow: 0px 10px 30px rgba(153, 153, 153, 0.3);
 }
 
+.youtube-link:hover {
+    text-decoration: none;
+}
+
 .lab-container>.panel-heading {
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
+  color: $grey-text;
+  font-weight: $light-weight;
   background-color: $off-white;
   border-bottom: 1px solid $light-grey-border;
   box-shadow: 0px 10px 30px rgba(153, 153, 153, 0.2);
@@ -338,6 +364,7 @@ a.anchor {
 
 .video-panel {
   margin-left: 20px;
+  font-weight: $light-weight;
 }
 
 .icon-360 {
@@ -358,13 +385,21 @@ a.anchor {
   text-align: left;
 }
 
-.below-video-container {
+.video-detail-container {
   color: $grey-text;
   font-weight: $light-weight;
   width: 100%;
   height: auto;
   padding: 10px;
   background-color: rgba(153, 153, 153, 0.05);
+}
+
+.video-detail-container.mobile {
+  font-size: 20px;
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 // Splash page type window
@@ -410,6 +445,7 @@ a.anchor {
                 0px 10px 20px rgba(153, 153, 153, 0.1);
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
 
     .panel-heading {
       margin: none;
@@ -447,23 +483,41 @@ a.anchor {
 .tour-panel:hover{
   -webkit-transform: scale(1.03, 1.03);
     transform: scale(1.03, 1.03);
-    a {
-        text-decoration: none;
-    }
+    opacity: 1;
+    box-shadow: 0px 0px 0px rgba(153, 153, 153, 0.5),
+                0px 10px 20px rgba(153, 153, 153, 0.4);
+}
 
+.tour-panel-link:hover {
+    text-decoration: none;
 }
 
 .tour-panel:hover::after {
   opacity: 1;
 }
 
-@media only screen and (min-width : 767px) and (max-width : 1500px) {
+@media only screen and (max-width : 1500px) {
   .spash-section-1 {
     background-size: auto;
-    background-position: 0 -200px ;
+    background-position: 0 0px ;
+    height: auto;
     min-height: 500px;
   }
 
+  // .splash-section-1 {
+  //   width: 100%;
+  //   margin: 0;
+  //   padding: 20px;
+  //   background-image: url( "{{ site_url }}/assets/images/serc.jpg" );
+  //   background-repeat: no-repeat;
+  //   background-color: $white;
+  //   background-size: cover;
+  //   background-position: 0 -300px ;
+  //   min-height: 700px;
+  //   opacity: 1;
+  //   box-shadow: 0px 0px 40px rgba(153, 153, 153, 0.3),
+  //               0px 10px 30px rgba(153, 153, 153, 0.3);
+  // }
 }
 
 /* Custom, iPhone Retina */
@@ -473,7 +527,7 @@ a.anchor {
      }
 
      a.anchor {
-       top: -180px;
+       top: 0px;
      }
 
      .team-member>.panel-footer>p {
@@ -481,6 +535,64 @@ a.anchor {
        color: $grey-text;
      }
 
+     .video-detail-container.mobile {
+       visibility: visible;
+       font-size: 14px;
+       height: auto;
+       padding: 10px;
+
+       .fa {
+         font-size: 30px;
+         text-align: center;
+         margin: 10px;
+
+       }
+     }
+
+     .video-detail-container.desktop {
+       visibility: hidden;
+       height: 0;
+       margin: 0;
+       padding: 0;
+
+       .icon-360 {
+         height: 0;
+       }
+     }
+
+     .type-window {
+       visibility: hidden;
+       height: 0px;
+       margin: 0;
+     }
+
+     .tour-panel {
+       min-height: 230px;
+     }
+
+     .splash-section-2 {
+       height: auto;
+     }
+
+     .spash-section-1 {
+       background-size: auto;
+       background-position: 0 0px ;
+       height: 500px;
+      //  opacity: 0.5;
+     }
+
+     #home-banner {
+       margin-top: 50px;
+     }
+
+     .splash-header-1 {
+       visibility: visible;
+
+     }
+
+     .youtube-embed {
+       height: 300px;
+     }
 
    }
 
