@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   margin: 0;
   padding: 20px 20px 150px 20px;
-  background-image: url( "{{ site_url }}/assets/images/serc.jpg" );
+  background-image: url( "{{ site.url }}/assets/images/serc.jpg" );
   background-repeat: no-repeat;
   background-color: $white;
   background-size: cover;
