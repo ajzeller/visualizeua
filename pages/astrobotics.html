@@ -1,0 +1,45 @@
+---
+layout: default
+title: Alabama Astrobotics Lab - Visualize UA
+permalink: /astrobotics/
+lab-location: Alabama Astrobotics Lab
+youtube-code: 26I-o7i66Fo
+location-description: Alabama Astrobotics is a robotics team that competes each year in NASA's Robotic Mining Competition at Kennedy Space Center. At the competition teams from around the country compete with their remote-controlled or autonomous robotic excavators in a super sized 12'x24' sandbox, which is filled with BP-1 regolith simulant, to see who can collect the most "moon dirt." Alabama Astrobotics is the only team with multiple victories and has won three times out of the seven years the competition has been held. 
+
+---
+
+<div class="container">
+  <div class="panel panel-default lab-container">
+    <div class="panel-heading">
+      <h2 class="video-panel"> {{ page.lab-location }} </h2>
+    </div>
+      <div class="video-detail-container desktop">
+        <img src="{{ site.url }}/assets/images/360-video.png" class="icon-360"/>
+
+        Fully immerse yourself in the {{ page.lab-location }}. Play the video
+        and drag the screen in any direction to view the lab from 360 degrees.
+      </div>
+
+    <iframe src="https://www.youtube.com/embed/{{ page.youtube-code }}" frameborder="0" allowfullscreen class="youtube-embed"></iframe>
+
+    <a class="youtube-link" href="https://www.youtube.com/watch?v={{ page.youtube-code }}">
+      <div class="video-detail-container mobile">
+        <!-- <i class="fa fa-exclamation-circle" aria-hidden="true"></i> -->
+        <i class="fa fa-youtube" aria-hidden="true"></i>
+        Click here to view 360 degree video on a mobile device via YouTube App. You
+        can either drag the screen in any direction or physically rotate your device
+        to see the lab in 360 degrees. Play video using a VR viewer like
+        Google Cardboard for further immersion.
+      </div>
+    </a>
+
+
+
+    <div class="panel-footer container-video-description">
+      {{ page.location-description }}
+    </div>
+
+  </div>
+
+
+</div>
